@@ -1,0 +1,46 @@
+﻿<Window x:Class="TreeViewAdv_GettingStarted.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TreeViewAdv_GettingStarted"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf" 
+        syncfusion:SkinStorage.VisualStyle="Metro"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="400" Width="600">
+    <Grid>
+        <syncfusion:TreeViewAdv Name="treeViewAdv" MultiColumnEnable="True">
+            <!-- Adding TreeViewItemAdv -->
+            <syncfusion:TreeViewItemAdv Name="treeViewItemAdv" Header="Marital Status">
+                <syncfusion:TreeViewItemAdv Header="Single"/>
+                <syncfusion:TreeViewItemAdv Header="Married"/>
+                <syncfusion:TreeViewItemAdv Header="Married with Children"/>
+            </syncfusion:TreeViewItemAdv>
+            <syncfusion:TreeViewItemAdv Header="Baby Vaccines">
+                <syncfusion:TreeViewItemAdv Header="Hepatitis B"/>
+                <syncfusion:TreeViewItemAdv Header="Tetanus"/>
+                <syncfusion:TreeViewItemAdv Header="Polio"/>
+                <syncfusion:TreeViewItemAdv Header="Measles"/>
+            </syncfusion:TreeViewItemAdv>
+            <syncfusion:TreeViewItemAdv Header="Country Information">
+                <syncfusion:TreeViewItemAdv Header="Canada"/>
+                <syncfusion:TreeViewItemAdv Header="France"/>
+                <syncfusion:TreeViewItemAdv Header="Germany"/>
+                <syncfusion:TreeViewItemAdv Header="UK"/>
+                <syncfusion:TreeViewItemAdv Header="USA"/>
+            </syncfusion:TreeViewItemAdv>
+            <!-- Adding header -->
+            <syncfusion:TreeViewAdv.Columns>
+                <syncfusion:TreeViewColumnCollection>
+                    <syncfusion:TreeViewColumn ContentAlignment="Center" Width="170" Header="Status"
+DisplayMemberBinding="{Binding Path=Header, RelativeSource={RelativeSource AncestorType={x:Type syncfusion:TreeViewItemAdv}}}"/>
+                    <syncfusion:TreeViewColumn ContentAlignment="Center" Width="170" Header="Vaccines"
+DisplayMemberBinding="{Binding Path=Header, RelativeSource={RelativeSource AncestorType={x:Type syncfusion:TreeViewItemAdv}}}"/>
+                    <syncfusion:TreeViewColumn ContentAlignment="Center" Width="170" Header="Country"
+DisplayMemberBinding="{Binding Path=Header, RelativeSource={RelativeSource AncestorType={x:Type syncfusion:TreeViewItemAdv}}}"/>
+                </syncfusion:TreeViewColumnCollection>
+            </syncfusion:TreeViewAdv.Columns>
+        </syncfusion:TreeViewAdv>
+    </Grid>
+</Window>
