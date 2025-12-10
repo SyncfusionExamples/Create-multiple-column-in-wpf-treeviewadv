@@ -37,6 +37,15 @@ This session describes about creating multiple column in [WPF TreeView](https://
 treeViewAdv.MultiColumnEnable = true;
 ```
 
+#### VB
+
+``` vb
+'Enable multiple column enable
+treeViewAdv.MultiColumnEnable = True
+```
+
+![TreeViewAdv with multicolumn enabled](TreeViewAdvWithSingleColumn.png)
+
 ### Header for MultiColumn
 
 TreeViewAdv allow user to set headers for individual columns using the Columns property. All the columns are defined in TreeViewColumnCollections.
@@ -77,4 +86,4 @@ TreeViewAdv allow user to set headers for individual columns using the Columns p
 </syncfusion:TreeViewAdv>
 ```
 
-![alt text](image.png)
+![TreeViewAdv with multicolumns providing with header text](TreeViewAdvWithMultiColumn.png)
